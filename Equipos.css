@@ -1,0 +1,121 @@
+/*Karla Alamillo Palacios
+Diseño Web */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #001f3f, #1e466e, #67baf4);
+  color: white;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+#search {
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+  border: none;
+}
+
+.filters button {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #0074D9;
+  color: white;
+  cursor: pointer;
+}
+
+#teamsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #012a4a;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 70px;
+}
+
+.star {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: #012a4a;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background: #0074D9;
+}
+
+tr:nth-child(even) {
+  background: #013a63;
+}
+
+
+.btn-regresar{
+
+display:inline-block;
+position:relative;
+
+padding:12px 30px;
+margin:40px auto;
+
+color:black;
+font-size:18px;
+text-decoration:none;
+text-transform:uppercase;
+letter-spacing:2px;
+
+background:#67baf4;
+border-radius:10px;
+
+overflow:hidden;
+
+transition:0.4s;
+
+}
+
+.btn-regresar:hover{
+
+background:#0f2c63;
+color:white;
+
+transform:scale(1.1);
+
+box-shadow:
+0 0 10px #0f2c63,
+0 0 20px #0f2c63,
+0 0 40px #0f2c63;
+
+}
+

@@ -1,0 +1,235 @@
+/* Karla Alamillo
+Diseño Web */
+body{
+
+margin:0;
+font-family:'Times New Roman', Times, serif;
+color:white;
+
+background:linear-gradient(-45deg,#000000,#1a1a1a,#1e466e,#67baf4);
+background-size:400% 400%;
+animation:fondoAnimado 12s ease infinite;
+
+}
+
+@keyframes fondoAnimado{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+
+/* Menu estilo netflix*/
+
+.menu-netflix{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:#111;
+padding:15px 40px;
+
+position:sticky;
+top:0;
+
+}
+
+.menu-netflix h2{
+
+color:white;
+font-size:28px;
+
+}
+
+.menu-netflix nav a{
+
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-size:18px;
+transition:0.3s;
+
+}
+
+.menu-netflix nav a:hover{
+
+color:white;
+
+}
+
+/*Scroll estilo netflix */
+
+.fila-netflix{
+
+display:flex;
+overflow-x:auto;
+gap:20px;
+
+padding:40px;
+
+scroll-behavior:smooth;
+
+}
+
+.fila-netflix::-webkit-scrollbar{
+
+height:8px;
+
+}
+
+.fila-netflix::-webkit-scrollbar-thumb{
+
+background:white;
+border-radius:10px;
+
+}
+
+/* Tarjetas con 3d*/
+
+.card{
+
+min-width:250px;
+height:320px;
+
+border-radius:12px;
+overflow:hidden;
+
+position:relative;
+
+transform-style:preserve-3d;
+transition:transform 0.5s;
+
+}
+
+.card img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+
+}
+
+.card-title{
+
+position:absolute;
+bottom:0;
+width:100%;
+
+background: #67baf4;
+
+text-align:center;
+padding:15px;
+
+font-size:20px;
+
+}
+
+.card:hover{
+
+transform:scale(1.1) rotateY(10deg);
+
+}
+
+/*Animacion al cargar pagina */
+
+.titulo{
+
+text-align:center;
+margin-top:30px;
+
+font-size:40px;
+
+animation:entrada 2s ease;
+
+}
+
+@keyframes entrada{
+
+from{
+
+opacity:0;
+transform:translateY(-50px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/* boton regreso */
+
+.btn-regresar{
+
+display:inline-block;
+position:relative;
+
+padding:12px 30px;
+margin:40px auto;
+
+color:black;
+font-size:18px;
+text-decoration:none;
+text-transform:uppercase;
+letter-spacing:2px;
+
+background:#67baf4;
+border-radius:10px;
+
+overflow:hidden;
+
+transition:0.4s;
+
+}
+
+.btn-regresar:hover{
+
+background:#0f2c63;
+color:white;
+
+transform:scale(1.1);
+
+box-shadow:
+0 0 10px #0f2c63,
+0 0 20px #0f2c63,
+0 0 40px #0f2c63;
+
+}
+
+/* modo telefono*/
+
+@media (max-width:768px){
+
+.menu-netflix{
+
+flex-direction:column;
+align-items:flex-start;
+
+}
+
+.fila-netflix{
+
+padding:20px;
+
+}
+
+.card{
+
+min-width:200px;
+height:260px;
+
+}
+
+.titulo{
+
+font-size:28px;
+
+}
+
+}

@@ -1,0 +1,160 @@
+/*Karla Alamillo Palacios
+Diseño Web */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #97233f;
+    color: white;
+}
+
+img {
+  width: 250px;
+  height: auto;
+}
+
+.hero {
+    background: linear-gradient(to right, #ffb612, #97233f);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #ffb612;
+}
+
+.navbar a {
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    background-color: #ac2343;
+}
+
+.section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.section img {
+    max-width: 90%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logos img {
+    width: 150px;
+    background: white;
+    padding: 10px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #ac2343;
+    width: 250px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.mascota {
+    width: 250px;
+}
+
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    background-color: #ffb612;
+    text-align: center;
+    padding: 15px;
+}
+
+
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logos {
+        flex-direction: column;
+    }
+}
+
+.btn-regresar{
+
+display:inline-block;
+position:relative;
+
+padding:12px 30px;
+margin:40px auto;
+
+color:black;
+font-size:18px;
+text-decoration:none;
+text-transform:uppercase;
+letter-spacing:2px;
+
+background:#67baf4;
+border-radius:10px;
+
+overflow:hidden;
+
+transition:0.4s;
+
+}
+
+.btn-regresar:hover{
+
+background:#0f2c63;
+color:white;
+
+transform:scale(1.1);
+
+box-shadow:
+0 0 10px #0f2c63,
+0 0 20px #0f2c63,
+0 0 40px #0f2c63;
+
+}

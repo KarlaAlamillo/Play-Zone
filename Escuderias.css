@@ -1,0 +1,255 @@
+/*Karla Alamillo Palacios
+Diseño Web */
+body {
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  background: #0a0a0a;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: #e10600;
+  padding: 10px;
+}
+
+.nav-buttons button {
+  margin: 5px;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #efe6de;
+}
+
+input {
+  padding: 6px;
+  border-radius: 6px;
+  border: none;
+}
+
+
+#teamsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+
+.card {
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s forwards;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card:active {
+  transform: scale(0.95);
+}
+
+.card img {
+  width: 80px;
+  margin-bottom: 10px;
+  transform: scale(0.95);
+}
+
+
+.race-card {
+  background: #1c1c1c;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+#teamsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 15px;
+  padding: 15px;
+}
+
+
+.card {
+  background: #111;
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  position: relative;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+
+.team-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: auto;
+}
+
+
+.rank {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.card button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+  #teamsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+.btn-regresar{
+
+display:inline-block;
+position:relative;
+
+padding:12px 30px;
+margin:40px auto;
+
+color: black;
+font-size:18px;
+text-decoration:none;
+text-transform:uppercase;
+letter-spacing:2px;
+
+background:#229971;
+border-radius:10px;
+
+overflow:hidden;
+
+transition:0.4s;
+
+}
+
+.btn-regresar:hover{
+
+background:#1868d8;
+color:white;
+
+transform:scale(1.1);
+
+box-shadow:
+0 0 10px #3671c6,
+0 0 20px #00a1e8,
+0 0 40px #27f4d2;
+
+}
+
+/* M0D0 7313F0N0*/
+
+@media (max-width:768px){
+
+.menu-netflix{
+
+flex-direction:column;
+align-items:flex-start;
+
+}
+
+.fila-netflix{
+
+padding:20px;
+
+}
+
+.card{
+
+min-width:200px;
+height:260px;
+
+}
+
+.titulo{
+
+font-size:28px;
+
+}
+
+}
+
+
+.card:hover {
+  box-shadow:
+    0 0 10px var(--team-color),
+    0 0 20px var(--team-color);
+}
+
+/* 1M493N 3N C413ND4R10 */
+.race-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.card-buttons button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #fff;
+  color: black;
+  transition: 0.3s;
+}
+
+.card-buttons button:hover {
+  background: var(--team-color);
+  color: white;
+}

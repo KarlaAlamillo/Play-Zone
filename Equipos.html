@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- Karla Alamillo
+ Diseño Web -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NFL Equipos</title>
+  <link rel="stylesheet" href="Equipos.css">
+  <link rel="icon" type="image/x-icon" href="https://images.emojiterra.com/google/android-12l/512px/1f3c8.png">
+</head>
+<body>
+
+<header>
+  <h1>NFL Equipos</h1>
+
+  <input type="text" id="search" placeholder="Buscar equipo...">
+
+  <div class="filters">
+    <button onclick="filterTeams('ALL')">Todos</button>
+    <button onclick="filterTeams('AFC')">AFC</button>
+    <button onclick="filterTeams('NFC')">NFC</button>
+    <button onclick="showFavorites()">⭐ Favoritos</button>
+  </div>
+</header>
+
+
+<h2 style="text-align:center;">📊 Tabla de Posiciones</h2>
+
+<table id="standingsTable">
+  <thead>
+    <tr>
+      <th>Equipo</th>
+      <th>Victorias</th>
+      <th>Derrotas</th>
+      <th>% de victorias</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+
+
+<main id="teamsContainer"></main>
+
+<a href="NFL.html" class="btn-regresar">Regresar</a>
+
+<script src="Equipos.js"></script>
+</body>
+</html>

@@ -1,0 +1,346 @@
+/*Karla Alamillo Palacios
+Diseño Web */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+
+background:
+linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.85)),
+url("https://i.pinimg.com/1200x/0b/b4/52/0bb4527e63a3d260663636f7a0632b49.jpg");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+
+color:white;
+
+}
+
+/* C4R1C4R3 */
+
+#loader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background:#001f3f;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+z-index:9999;
+color:white;
+font-family:Arial;
+}
+
+/* C4M90 */
+
+.field{
+
+width:80%;
+height:200px;
+background:linear-gradient(#0b6623,#0f8f3a);
+border-radius:10px;
+position:relative;
+overflow:hidden;
+
+}
+
+/* 11N33 D1 C4M90 */
+
+.field::before{
+
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:
+repeating-linear-gradient(
+to right,
+transparent,
+transparent 45px,
+white 45px,
+white 50px
+);
+
+opacity:0.4;
+
+}
+
+/* 90R73R14 */
+
+.goalpost{
+
+position:absolute;
+right:40px;
+bottom:40px;
+
+width:10px;
+height:100px;
+background:yellow;
+
+}
+
+.goalpost::before{
+
+content:"";
+position:absolute;
+top:0;
+left:-40px;
+width:90px;
+height:10px;
+background:yellow;
+
+}
+
+/* 94114 */
+
+.football{
+
+width:60px;
+height:35px;
+background:#8B4513;
+border-radius:40px;
+position:absolute;
+bottom:20px;
+left:30px;
+
+transform-style:preserve-3d;
+
+animation:kick 4s forwards;
+
+}
+
+/* 11N33 D1 9411A */
+
+.football::before{
+
+content:"";
+position:absolute;
+top:50%;
+left:10%;
+width:80%;
+height:4px;
+background:white;
+transform:translateY(-50%);
+
+}
+
+/* 4N1M4Z10N3 D31 C4M90 */
+
+@keyframes kick{
+
+0%{
+
+transform:translate(0,0) rotateY(0deg) rotateZ(0);
+
+}
+
+40%{
+
+transform:translate(300px,-120px) rotateY(360deg) rotateZ(20deg);
+
+}
+
+70%{
+
+transform:translate(500px,-150px) rotateY(720deg);
+
+}
+
+100%{
+
+transform:translate(650px,-80px) rotateY(1080deg);
+
+}
+
+}
+
+/* B4RR4 D1 Y4RD */
+
+.yard-bar{
+
+width:60%;
+height:20px;
+background:#222;
+border-radius:10px;
+margin-top:30px;
+overflow:hidden;
+
+}
+
+.yard-progress{
+
+height:100%;
+width:0%;
+background:linear-gradient(90deg,#d50a0a,#ff3c3c);
+transition:width .2s;
+
+}
+
+#yard-text{
+
+margin-top:10px;
+font-size:18px;
+letter-spacing:2px;
+
+}
+
+
+h1{
+text-align:center;
+margin:50px auto;
+position:relative;
+width:80%;
+}
+
+h1 span{
+background:black;
+padding:10px 20px;
+}
+
+h1::before{
+content:"";
+position:absolute;
+width:100%;
+height:2px;
+background:#001f3f;
+top:50%;
+left:0;
+z-index:-1;
+}
+
+
+
+.img-gallery{
+
+width:85%;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+
+}
+
+.img-gallery img{
+
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:8px;
+cursor:pointer;
+transition:.4s;
+
+}
+
+
+
+.img-gallery img:hover{
+
+transform:scale(1.15);
+box-shadow:0 0 25px #001f3f;
+
+}
+
+
+
+.ful-img{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background:rgba(0,0,0,0.95);
+display:none;
+align-items:center;
+justify-content:center;
+
+}
+
+.ful-img img{
+
+max-width:80%;
+max-height:80%;
+border-radius:10px;
+
+}
+
+
+.close{
+
+position:absolute;
+top:20px;
+right:40px;
+font-size:35px;
+cursor:pointer;
+
+}
+
+.prev,.next{
+
+position:absolute;
+top:50%;
+font-size:50px;
+cursor:pointer;
+padding:10px;
+
+}
+
+.prev{
+left:5%;
+}
+
+.next{
+right:5%;
+}
+
+.prev:hover,.next:hover{
+color: #1e466e;
+}
+
+
+/* boton regreso */
+
+.btn-regresar{
+
+display:inline-block;
+position:relative;
+
+padding:12px 30px;
+margin:40px auto;
+
+color:white;
+font-size:18px;
+text-decoration:none;
+text-transform:uppercase;
+letter-spacing:2px;
+
+background:#1e466e;
+border-radius:10px;
+
+overflow:hidden;
+
+transition:0.4s;
+
+}
+
+.btn-regresar:hover{
+
+background:#67baf4;
+color:white;
+
+transform:scale(1.1);
+
+box-shadow:
+0 0 10px #1e466e,
+0 0 20px #1e466e,
+0 0 40px #1e466e;
+
+}

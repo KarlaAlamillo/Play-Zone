@@ -1,0 +1,152 @@
+<!DOCTYPE html>  
+<html lang="es">
+    <!--Karla Alamillo Palacios 
+    Diseño Web--> 
+<head>
+    <meta charset="UTF-8">
+    <title>Entretenimiento</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="EntretenimientoNFL.css">
+    <link rel="icon" type="image/x-icon" href="https://images.emojiterra.com/google/android-12l/512px/1f3c8.png">
+</head>
+
+<body class="dark">
+<header>
+    <div class="top">
+        <h1>🎬 NFL Movies</h1>
+        <button id="modoBtn" onclick="cambiarModo()">🌙</button>
+    </div>
+
+    <input type="text" id="buscador" placeholder="Buscar...">
+
+    <div class="filtros">
+        <button onclick="filtrar('todos')">Todos</button>
+        <button onclick="filtrar('pelicula')">Películas</button>
+        <button onclick="filtrar('serie')">Series</button>
+        <button onclick="mostrarVideos()">Videos</button>
+    </div>
+</header>
+
+<main>
+    <section class="lista" id="lista"></section>
+
+    <section class="detalle" id="detalle">
+        <h2>Selecciona una película o serie</h2>
+    </section>
+
+    
+    <section class="videos" id="videos">
+        <h2>🏈 Medios Tiempos del Super Bowl</h2>
+
+        <div class="video-card">
+            <iframe width="818" height="460" src="https://www.youtube.com/embed/G6FuWd4wNd8?list=PL1ex6thGdoPRA_06adM7XPEnf9U_dJ9l7" title="Bad Bunny&#39;s Apple Music Super Bowl Halftime Show" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Bad Bunny's Apple Music Super Bowl Halftime Show 2026</p>
+        </div>
+
+        <div class="video-card">
+            <iframe width="818" height="460" src="https://www.youtube.com/embed/KDorKy-13ak?list=PL1ex6thGdoPRA_06adM7XPEnf9U_dJ9l7" title="Kendrick Lamar&#39;s Apple Music Super Bowl Halftime Show" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Kendrick Lamar's Apple Music Super Bowl Halftime Show 2025</p>
+        </div>
+
+        <div class="video-card">
+           <iframe width="818" height="460" src="https://www.youtube.com/embed/7hYbrdC_-s8?list=PL1ex6thGdoPRA_06adM7XPEnf9U_dJ9l7" title="Usher’s Apple Music Super Bowl Halftime Show" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Usher’s Apple Music Super Bowl Halftime Show 2024</p>
+        </div>
+
+        <div class="video-card">
+            <iframe width="818" height="460" src="https://www.youtube.com/embed/HjBo--1n8lI?list=PL1ex6thGdoPRA_06adM7XPEnf9U_dJ9l7" title="Rihanna’s FULL Apple Music Super Bowl LVII Halftime Show" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Rihanna’s FULL Apple Music Super Bowl LVII Halftime Show 2023</p>
+        </div>
+
+        <div class="video-card">
+           <iframe width="818" height="460" src="https://www.youtube.com/embed/gdsUKphmB3Y?list=PL1ex6thGdoPRA_06adM7XPEnf9U_dJ9l7" title="Dr. Dre, Snoop Dogg, Eminem, Mary J. Blige, Kendrick Lamar &amp; 50 Cent FULL Pepsi SB LVI Halftime Show" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Dr. Dre, Snoop Dogg, Eminem, Mary J. Blige, Kendrick Lamar & 50 Cent FULL Pepsi SB LVI Halftime Show 2022</p>
+        </div>
+
+        <div class="video-card">
+            <iframe width="818" height="460" src="https://www.youtube.com/embed/9rhadTURsrw?list=PL1ex6thGdoPRA_06adM7XPEnf9U_dJ9l7" title="The Weeknd’s FULL Pepsi Super Bowl LV Halftime Show" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p> The Weeknd’s FULL Pepsi Super Bowl LV Halftime Show 2021</p>
+        </div>
+
+        <div class="video-card">
+            <iframe width="818" height="460" src="https://www.youtube.com/embed/pILCn6VO_RU?list=PL1ex6thGdoPRA_06adM7XPEnf9U_dJ9l7" title="Shakira &amp; J. Lo&#39;s FULL Pepsi Super Bowl LIV Halftime Show" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Shakira & J. Lo's FULL Pepsi Super Bowl LIV Halftime Show 2020</p>
+        </div>
+
+        <div class="video-card">
+            <iframe width="818" height="460" src="https://www.youtube.com/embed/zIwkhEqVq4s?list=PL1ex6thGdoPRA_06adM7XPEnf9U_dJ9l7" title="Maroon 5 (feat. Travis Scott &amp; Big Boi) | Pepsi Super Bowl LIII Halftime Show" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Maroon 5 (feat. Travis Scott & Big Boi) | Pepsi Super Bowl LIII Halftime Show 2019</p>
+        </div>
+
+        <div class="video-card">
+            <iframe width="818" height="460" src="https://www.youtube.com/embed/2z3EUY1aXdY?list=PL1ex6thGdoPRA_06adM7XPEnf9U_dJ9l7" title="Justin Timberlake’s FULL Pepsi Super Bowl LII Halftime Show! | NFL Highlights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Justin Timberlake’s FULL Pepsi Super Bowl LII Halftime Show 2018</p>
+        </div>
+
+        <div class="video-card">
+            <iframe width="818" height="460" src="https://www.youtube.com/embed/txXwg712zw4?list=PL1ex6thGdoPRA_06adM7XPEnf9U_dJ9l7" title="Pepsi Zero Azúcar Super Bowl de Lady Gaga COMPLETO LI Espectáculo de Medio Tiempo | NFL" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Pepsi Zero Azúcar Super Bowl de Lady Gaga COMPLETO LI 2017 </p>
+        </div>
+
+        <div class="video-card">
+            <iframe width="818" height="460" src="https://www.youtube.com/embed/c9cUytejf1k?list=PL1ex6thGdoPRA_06adM7XPEnf9U_dJ9l7" title="Show de medio tiempo del Super Tazon 50. Coldplay, Beyonce &amp; Bruno Mars" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Show de medio tiempo del Super Tazon 50. Coldplay, Beyonce & Bruno Mars 2016</p>
+        </div>
+
+        <div class="video-card">
+            <iframe width="818" height="460" src="https://www.youtube.com/embed/ZD1QrIe--_Y?list=PL1ex6thGdoPRA_06adM7XPEnf9U_dJ9l7" title="Katy Perry Show de Medio Tiempo Pepsi Super Bowl XLIX | Con Missy Elliot y Lenny Kravitz | NFL" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Katy Perry Show de Medio Tiempo Pepsi Super Bowl XLIX | Con Missy Elliot y Lenny Kravitz 2015</p>
+        </div>
+
+        <div class="video-card">
+            <iframe width="818" height="460" src="https://www.youtube.com/embed/7LE5c1z2HQA?list=RD7LE5c1z2HQA" title="Bruno Mars - Super Bowl Halftime Show, 2014" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Bruno Mars - Super Bowl Halftime Show, 2014</p>
+        </div>
+
+        <div class="video-card">
+           <iframe width="818" height="460" src="https://www.youtube.com/embed/sBvfsLRtTm8?list=PL1ex6thGdoPRA_06adM7XPEnf9U_dJ9l7" title="Beyoncé - Super Bowl [4K Quality 2160p]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Beyoncé - Super Bowl 2013</p>
+        </div>
+
+        <div class="video-card">
+          <iframe width="818" height="460" src="https://www.youtube.com/embed/ucdaEjd1Y4A?list=PL1ex6thGdoPRA_06adM7XPEnf9U_dJ9l7" title="Madonna - 2012 Super Bowl Halftime Show" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Madonna Super Bowl Halftime Show 2012</p>
+        </div>
+
+        <div class="video-card">
+          
+            <p></p>
+        </div>
+        
+        <div class="video-card">
+          <iframe width="818" height="460" src="https://www.youtube.com/embed/xPIiaSnYV5E?list=PL1ex6thGdoPRA_06adM7XPEnf9U_dJ9l7" title="Super Bowl XLV 2011 - Halftime Show - Black Eyed Peas [HD][Full]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Super Bowl XLV - Halftime Show - Black Eyed Peas 2011 </p>
+        </div>
+
+        <div class="video-card">
+          <iframe width="818" height="460" src="https://www.youtube.com/embed/ScA2FqJn9ic?list=PL1ex6thGdoPRA_06adM7XPEnf9U_dJ9l7" title="THE WHO SuperBowl XLIV Half-Time Show &quot;COMPLETE&quot; (TRUE HD) --- 02-07-10-1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>THE WHO SuperBowl XLIV Half-Time Show 2010</p>
+        </div>
+
+        <div class="video-card">
+          <iframe width="818" height="460" src="https://www.youtube.com/embed/O57HJV3duX4?list=RDO57HJV3duX4" title="Beyoncé - NFL Halftime Show 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Beyoncé - NFL Halftime Show Navidad 2024</p>
+        </div>
+
+        <div class="video-card">
+          <iframe width="818" height="460" src="https://www.youtube.com/embed/-DINXNvNNC4?list=RD-DINXNvNNC4" title="Karol G&#39;s FULL Halftime Show at the São Paulo Game" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Karol G's FULL Halftime Show at the São Paulo Game</p>
+        </div>
+
+        <div class="video-card">
+          <iframe width="818" height="460" src="https://www.youtube.com/embed/Vv9LBKqUYdg?list=RDVv9LBKqUYdg" title="Snoop Dogg Christmas Day FULL Halftime Show (ft. Lainey Wilson &amp; HUNTR/X)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Snoop Dogg Christmas Day FULL Halftime Show (ft. Lainey Wilson & HUNTR/X)</p>
+        </div>
+    </section>
+</main>
+
+<a href="NFL.html" class="btn-regresar">Regresar</a>
+
+<script src="EntretenimientoNFL.js"></script>
+</body>
+</html>

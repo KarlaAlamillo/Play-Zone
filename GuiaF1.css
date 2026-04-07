@@ -1,0 +1,201 @@
+/* Karla Alamillo Palacios
+Diseño Web */
+body {
+  margin: 0;
+  font-family: calligraphy;
+  background: radial-gradient(circle, #ed1c24, #efe6de);
+  color: black;
+}
+
+h2{
+
+  color: #ed1c24;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #a6051a;
+}
+
+.navbar a {
+    color: #a5acaf;
+    padding: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    background-color: #625d65;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px;
+}
+
+
+.section {
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.cards {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+}
+
+.card {
+  min-width: 150px;
+  background: #e6e1de;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px red;
+}
+
+/* 114n745 */
+.tire.supersoft { border: 2px solid red; }
+.tire.soft { border: 2px solid yellow; }
+.tire.medium { border: 2px solid white; }
+.tire.hard { border: 2px solid orange; }
+.tire.inters { border: 2px solid green; }
+.tire.wet { border: 2px solid blue; }
+
+
+@media (max-width:600px){
+  .card {
+    min-width: 120px;
+  }
+}
+
+/* GR4F1C05 */
+#speedChart {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  display: block;
+  background: #111;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+.btn-regresar{
+
+display:inline-block;
+position:relative;
+
+padding:12px 30px;
+margin:40px auto;
+
+color: black;
+font-size:18px;
+text-decoration:none;
+text-transform:uppercase;
+letter-spacing:2px;
+
+background:#229971;
+border-radius:10px;
+
+overflow:hidden;
+
+transition:0.4s;
+
+}
+
+.btn-regresar:hover{
+
+background:#1868d8;
+color:white;
+
+transform:scale(1.1);
+
+box-shadow:
+0 0 10px #3671c6,
+0 0 20px #00a1e8,
+0 0 40px #27f4d2;
+
+}
+
+.section {
+  padding: 40px;
+  text-align: center;
+  background: #0b0b0f;
+  color: white;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #111;
+  border-radius: 15px;
+  padding: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+
+  /* EFECTO ONDEO */
+  animation: wave 2s infinite ease-in-out;
+}
+
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #e6e1de;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 400px;
+}
+
+.modal-content img {
+  width: 100%;
+  animation: wave 2s infinite;
+}
+
+.modal-content p {
+  margin-top: 15px;
+  font-size: 18px;
+}

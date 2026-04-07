@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- Karla Alamillo
+ Diseño Web -->
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galería NFL</title>
+
+<link rel="stylesheet" href="GaleriaNFL.css">
+<link rel="icon" type="image/x-icon" href="https://images.emojiterra.com/google/android-12l/512px/1f3c8.png">
+
+</head>
+
+<body>
+
+<div id="loader">
+
+<div class="field">
+
+<div class="goalpost"></div>
+
+<div class="football"></div>
+
+</div>
+
+<div class="yard-bar">
+
+<div class="yard-progress"></div>
+
+</div>
+
+<p id="yard-text">0 YARDAS</p>
+
+</div>
+
+<h1><span>Galería NFL</span></h1>
+
+
+
+<div class="ful-img" id="fulImgBox">
+
+<span class="close" onclick="closeImg()">✕</span>
+
+<span class="prev" onclick="changeImg(-1)">❮</span>
+
+<img id="fulImg">
+
+<span class="next" onclick="changeImg(1)">❯</span>
+
+</div>
+
+
+
+<div class="img-gallery" id="gallery"></div>
+
+<a href="NFL.html" class="btn-regresar">Regresar</a>
+
+<script src="GaleriaNFL.js"></script>
+
+</body>
+</html>
